@@ -1,0 +1,59 @@
+[user]
+  name = Shuguo Yang
+  email = yangshuguo@google.com
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  commit = white bold
+
+[color "status"]
+  added = yellow bold
+  changed = cyan bold
+  untracked = cyan bold
+
+[alias]
+  ci = commit
+  co = checkout
+  br = branch
+  st = status
+  rb = rebase
+  rbc = rebase --continue
+  rba = rebase --abort
+  m = merge
+  mt = mergetool
+  a = add
+  lg = log --graph --decorate
+
+  #for git5
+  sort = !git5 diff --name-only | grep -e '\\.java$' | xargs READONLY/google3/tools/java/sort_java_imports.py
+  unused = !git5 diff --name-only | grep -e '\\.java$' | xargs READONLY/google3/tools/java/remove_unused_imports.py --fix
+  buildify = !git5 diff --name-only | grep -e 'BUILD$' | xargs /google/data/ro/projects/devtools/buildifier/buildifier --mode=fix
+  submit = "!git5 submit --sq --tap_project=xfp_frontend"
+  exp = "!git5 export --sq --tap_project=xfp_frontend"
+  sync = '!git5 sync'
+
+  package-check-exclude=ads/db/changes
+
+[core]
+  editor = vim
+  excludesfile = file
+  excludesfile = file
+
+[diff]
+  tool = vimdiff
+
+[merge]
+  tool = vimdiff

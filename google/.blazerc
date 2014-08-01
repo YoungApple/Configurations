@@ -1,0 +1,3 @@
+startup
+build --forge --gwt_shards=84 --color=auto --curses=auto --embed_changelist=none
+test --forge --gwt_shards=84 --test_output=errors
