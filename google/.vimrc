@@ -5,6 +5,11 @@ source /usr/share/vim/google/google.vim
 filetype plugin indent on
 syntax on
 
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set synmaxcol=0
+
 Glug youcompleteme-google
 Glug gtimporter
 
